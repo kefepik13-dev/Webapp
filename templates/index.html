@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <!-- <img /> -->
+            <h1 class="logo-text">BudgetBro</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="active" href="/dashboard">Dashboard</a></li>
+            <li><a href="/transaktionen">Transaktionen</a></li>
+            <li><a href="/ziele">Ziele</a></li>
+            <li><a href="/einstellungen">Einstellungen</a></li>
+        </ul>
+
+    </nav>
+
+    <!--Dashboard Wrapper-->
+    <main class="dashboard-wrapper">
+
+        <h2 class="welcome-title">Willkommen zurück!</h2>
+        <p class="welcome-sub">Du schlägst dich super - immer weitersparen 💪</p>
+
+        <div class="dashboard-grid">
+
+            <!--Balance Card-->
+            <div class="card balance-card">
+                <h3>Aktuelles Guthaben</h3>
+            </div>
+
+            <!--Tips Card-->
+            <div class="card tips-card">
+                <h3>Kleine Tipps</h3>
+                <ul>
+                    <li>Notiere alle deine Ein- und Ausgaben</li>
+                    <li>Setze dir Sparziele</li>
+                    <li>Gerate nie in Disposition</li>
+                </ul>
+            </div>
+
+            <!--Expense card-->
+            <div class="card expense-card">
+                <h3>Ausgaben</h3>
+            </div>
+
+            <!--Earnings Card-->
+            <div class="card earnings-card">
+                <h3>Einnahmen</h3>
+            </div>
+
+            <!--Goal card-->
+            <div class="goal-card">
+                <h3>🎯 Sparziel: Neuer Laptop</h3>
+
+                <p class="goal-amount">
+                    550€ <span>/ 1000€</span>
+                </p>
+
+                <div class="goal-progressbar">
+                    <div class="goal-progress" style="width: 55%;"></div>
+                </div>
+
+                <p class="goal-percent">55% erreicht</p>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
