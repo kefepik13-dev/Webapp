@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BudgetBro{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="Logo" class="logo-icon">
+                <h1 class="logo-text">BudgetBro</h1>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="{% if active_page == 'dashboard' %}active{% endif %}" href="/dashboard">Dashboard</a></li>
+            <li><a class="{% if active_page == 'transaktionen' %}active{% endif %}"
+                    href="/transaktionen">Transaktionen</a></li>
+            <li><a class="{% if active_page == 'ziele' %}active{% endif %}" href="/ziele">Ziele</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+
+</html>

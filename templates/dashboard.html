@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - BudgetBro{% endblock %}
+
+{% block content %}
+<div class="dashboard-wrapper">
+
+    <h2 class="welcome-title">Willkommen zurück!</h2>
+    <p class="welcome-sub">Du schlägst dich super - immer weitersparen 💪</p>
+
+    <div class="dashboard-grid">
+
+        <div class="card tips-card">
+            <h3>Kleine Tipps</h3>
+            <ul>
+                <li>Notiere alle deine Ein- und Ausgaben</li>
+                <li>Setze dir Sparziele</li>
+                <li>Gerate nie in Disposition</li>
+            </ul>
+        </div>
+
+        <div class="card sankey-card">
+            <h3>💸 Finanzübersicht</h3>
+            <!-- {{ graph_html | safe }}-->
+        </div>
+
+
+        <div class="goal-card">
+            <h3>🎯 Sparziel: Neuer Laptop</h3>
+            <p class="goal-amount">550€ <span>/ 1000€</span></p>
+            <div class="goal-progressbar">
+                <div class="goal-progress" style="width: 55%;"></div>
+            </div>
+            <p class="goal-percent">55% erreicht</p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
